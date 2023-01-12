@@ -1,8 +1,7 @@
-import { useState } from "react";
+import { useState } from 'react'
 
 //custom modal hook
 function useModal() {
-
   // Modal's state
   const [isOpen, setIsOpen] = useState(false)
 
@@ -11,8 +10,8 @@ function useModal() {
     setIsOpen(!isOpen)
   }
 
-  function escToClose(){
-    if(escToClose.key === 'Escape') {
+  function escToClose() {
+    if (escToClose.key === 'Escape') {
       toggle()
     }
   }
