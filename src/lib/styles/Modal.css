@@ -64,3 +64,8 @@
   text-align: center;
   color: var(--tertiary);
 }
+
+/* MODAL MAIN SECTION */
+.modal-main--msg {
+  text-align: center;
+}

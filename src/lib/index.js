@@ -4,6 +4,7 @@ import check from './assets/check.png'
 
 // STYLES
 import './styles/Modal.css'
+import './styles/exemple.css'
 
 // COMPONENT
 import useModal from './component/useModal'

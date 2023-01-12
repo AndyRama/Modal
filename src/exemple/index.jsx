@@ -27,6 +27,9 @@ function Exemple() {
         x={close} // replace with the name of your import
         // ADDITIONAL (optional)
         icon={check} // replace with the name of your import
+        title="Confirmation" // replace with any string
+        msgL1="Modal plugin" // replace with any string
+        msgL2="successfully installed" // replace with any string
       ></Modal>
     </>
   )

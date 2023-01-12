@@ -9,6 +9,9 @@ function Modal({
   title,
   hideTitle,
   hideHeader,
+  msgL1,
+  msgL2,
+  hideMsgL2,
 }) {
   return createPortal(
     <>
@@ -58,6 +61,24 @@ function Modal({
                 <hr className="modal-header--separator" />
               </>
             )}
+            <main className="modal-main--msg">
+              <p
+                tabIndex="0"
+                id="dialogDescription"
+                className="modal-main--msgL1"
+              >
+                {msgL1}
+              </p>
+              {hideMsgL2 ? null : (
+                <p
+                  tabIndex="0"
+                  id="dialogDescription"
+                  className="modal-main--msgL2"
+                >
+                  {msgL2}
+                </p>
+              )}
+            </main>
           </section>
         </main>
       ) : null}
