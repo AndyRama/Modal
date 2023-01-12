@@ -76,3 +76,48 @@
 .modal-main--msg {
   text-align: center;
 }
+
+
+.modal-footer--separator {
+  margin-top: 2rem;
+  height: 0.5px;
+  border: none;
+  background-color: var(--primary);
+}
+
+.modal-footer--btn1,
+.modal-footer--btn2 {
+  background-color: transparent;
+  border: 1px solid var(--secondary);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  color: var(--secondary);
+  font-weight: 600;
+}
+
+.modal-footer--btn1:hover,
+.modal-footer--btn2:hover {
+  background-color: var(--secondary);
+  color: var(--light);
+}
+
+/* MODAL DISABLED BTN */
+.disabled,
+.disabled:hover {
+  border: 1px solid var(--diabled-text);
+  background-color: var(--disabled);
+  color: var(--diabled-text);
+  cursor: not-allowed;
+}
+
+.modal-footer--btn1:focus,
+.modal-footer--btn2:focus {
+  outline: none;
+  box-shadow: 0 0 0 1.5px var(--secondary);
+  border-radius: 0.5rem;
+}
+
+.disabled:focus {
+  outline: none;
+  box-shadow: 0 0 0 1.5px var(--diabled-text);
+}
