@@ -1,5 +1,7 @@
 {
   "name": "andyrama-modal",
+  "description": "React customizable Modal plugin",
+  "author": "Andy ramaroson alias Andyrama",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
