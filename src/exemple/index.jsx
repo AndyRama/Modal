@@ -32,18 +32,18 @@ function Exemple() {
         msgL2="successfully installed" // replace with any string
         btn1="Back" // replace with any string
         btn2="Redirect" // replace with any string
-        // redirect={goTo} // !!! NEEDS APP ROUTING
+        // redirect={goTo}              // !!! NEEDS APP ROUTING
 
         // DISABLE (optional)
-        // disableBtn1={true} // decomment to disable btn1
-        disableBtn2={true} // comment to enable btn2
+        // disableBtn1={true}           // decomment to disable btn1
+        // disableBtn2={true}           // comment to enable btn2
 
         // HIDE (optional)
         // hideIcon={true}              // decomment to hide icon
         // hideTitle={true}             // decomment to hide title
-        // hideMsgL2 ={true}            // decomment to hide msgL2
-        // hideBtn1 ={true}             // decomment to hide btn1
-        // hideBtn2 ={true}             // decomment to hide btn2
+        // hideMsgL2={true}             // decomment to hide msgL2
+        // hideBtn1={true}              // decomment to hide btn1
+        // hideBtn2={true} // decomment to hide btn2
         // hideHeader={true}            // decomment to hide header
         // hideFooter={true}            // decomment to hide footer
       />

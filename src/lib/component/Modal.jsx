@@ -14,9 +14,9 @@ function Modal({
   hideMsgL2,
   hideFooter,
   btn1,
-  hidenBtn1,
+  hideBtn1,
   btn2,
-  hidenBtn2,
+  hideBtn2,
   redirect,
   disableBtn1 = '',
   disableBtn2 = '',
@@ -95,7 +95,7 @@ function Modal({
               <>
                 <hr className="modal-footer--separator" />
                 <footer className="modal-footer">
-                  {hidenBtn1 ? null : (
+                  {hideBtn1 ? null : (
                     <button
                       className={`modal-footer--btn1 ${disableBtn1}`}
                       onClick={close}
@@ -103,7 +103,7 @@ function Modal({
                       {btn1}
                     </button>
                   )}
-                  {hidenBtn2 ? null : (
+                  {hideBtn2 ? null : (
                     <button
                       className={`modal-footer--btn2 ${disableBtn2}`}
                       onClick={redirect}
