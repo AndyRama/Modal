@@ -12,7 +12,18 @@ function Modal({
   msgL1,
   msgL2,
   hideMsgL2,
+  hideFooter,
+  btn1,
+  hidenBtn1,
+  btn2,
+  hidenBtn2,
+  redirect,
+  disableBtn1 = '',
+  disableBtn2 = '',
 }) {
+  if (disableBtn1) disableBtn1 = 'disabled'
+  if (disableBtn2) disableBtn2 = 'disabled'
+
   return createPortal(
     <>
       {modal ? (
@@ -61,6 +72,7 @@ function Modal({
                 <hr className="modal-header--separator" />
               </>
             )}
+
             <main className="modal-main--msg">
               <p
                 tabIndex="0"
@@ -79,6 +91,29 @@ function Modal({
                 </p>
               )}
             </main>
+            {hideFooter ? null : (
+              <>
+                <hr className="modal-footer--separator" />
+                <footer className="modal-footer">
+                  {hidenBtn1 ? null : (
+                    <button
+                      className={`modal-footer--btn1 ${disableBtn1}`}
+                      onClick={close}
+                    >
+                      {btn1}
+                    </button>
+                  )}
+                  {hidenBtn2 ? null : (
+                    <button
+                      className={`modal-footer--btn2 ${disableBtn2}`}
+                      onClick={redirect}
+                    >
+                      {btn2}
+                    </button>
+                  )}
+                </footer>
+              </>
+            )}
           </section>
         </main>
       ) : null}

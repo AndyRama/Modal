@@ -30,7 +30,14 @@ function Exemple() {
         title="Confirmation" // replace with any string
         msgL1="Modal plugin" // replace with any string
         msgL2="successfully installed" // replace with any string
-      ></Modal>
+        btn1="Back" // replace with any string
+        btn2="Redirect" // replace with any string
+        // redirect={goTo} // !!! NEEDS APP ROUTING
+
+        // DISABLE (optional)
+        // disableBtn1={true} // decomment to disable btn1
+        disableBtn2={true} // comment to enable btn2
+      />
     </>
   )
 }

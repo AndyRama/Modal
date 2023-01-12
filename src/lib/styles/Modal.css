@@ -60,6 +60,13 @@
   background-color: var(--tertiary);
 }
 
+.modal-footer {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
 .modal-header--title {
   text-align: center;
   color: var(--tertiary);
