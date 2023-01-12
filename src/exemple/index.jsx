@@ -37,6 +37,15 @@ function Exemple() {
         // DISABLE (optional)
         // disableBtn1={true} // decomment to disable btn1
         disableBtn2={true} // comment to enable btn2
+
+        // HIDE (optional)
+        // hideIcon={true}              // decomment to hide icon
+        // hideTitle={true}             // decomment to hide title
+        // hideMsgL2 ={true}            // decomment to hide msgL2
+        // hideBtn1 ={true}             // decomment to hide btn1
+        // hideBtn2 ={true}             // decomment to hide btn2
+        // hideHeader={true}            // decomment to hide header
+        // hideFooter={true}            // decomment to hide footer
       />
     </>
   )
