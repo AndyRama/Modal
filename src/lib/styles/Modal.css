@@ -41,3 +41,26 @@
 .modal-container--close img:hover {
   transform: scale(1.1);
 }
+
+/* MODAL HEADER SECTION */
+.modal-header {
+  position: relative;
+}
+
+.modal-header--icon {
+  width: 2.5rem;
+  display: block;
+  margin: 1rem auto 2rem;
+}
+
+.modal-header--separator {
+  margin-bottom: 2rem;
+  height: 3px;
+  border: none;
+  background-color: var(--tertiary);
+}
+
+.modal-header--title {
+  text-align: center;
+  color: var(--tertiary);
+}
