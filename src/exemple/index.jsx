@@ -43,7 +43,7 @@ function Exemple() {
         // hideTitle={true}             // decomment to hide title
         // hideMsgL2={true}             // decomment to hide msgL2
         // hideBtn1={true}              // decomment to hide btn1
-        // hideBtn2={true} // decomment to hide btn2
+        // hideBtn2={true}              // decomment to hide btn2
         // hideHeader={true}            // decomment to hide header
         // hideFooter={true}            // decomment to hide footer
       />

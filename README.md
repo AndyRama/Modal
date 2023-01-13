@@ -186,3 +186,4 @@ export default function Exemple() {
   );
 }
 ```
+![Select Modal items you need](./src/lib/documentation/andyrama-modal_FEATURES.png)
