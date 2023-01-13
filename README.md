@@ -118,7 +118,7 @@ import { useNavigate } from 'react-router-dom'; // !!! IN ROUTING CONTEXT
 ```jsx
       <Modal
         x={close}
-        icon={thumbUp}
+        icon={check}
         // or icon={validate}
       />
 ```
