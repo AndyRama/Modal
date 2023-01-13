@@ -4,6 +4,8 @@ A fully customizable Modal component for React apps
 
 > _using React Portal, the Modal is mounted on its own node as a distinct child of App body_
 
+[![NPM](https://img.shields.io/npm/v/andyrama-modal.svg)](https://www.npmjs.com/package/andyrama-modal) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+
 ## Features
 
 ☑️ **useModal**
