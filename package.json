@@ -8,7 +8,7 @@
     "plugin",
     "customizable"
   ],
-  "version": "0.1.0",
+  "version": "0.1.2",
   "private": false,
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -60,8 +60,8 @@
     "react-scripts": "5.0.1"
   },
   "peerDependencies": {
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "bugs": {
     "url": "https://github.com/andyrama/modal/issues"
