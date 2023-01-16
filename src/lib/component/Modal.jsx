@@ -1,4 +1,5 @@
 import { createPortal } from 'react-dom'
+import PropTypes from 'prop-types'
 
 function Modal({
   modal,
@@ -120,6 +121,31 @@ function Modal({
     </>,
     document.body
   )
+}
+/**
+ * Modal PROPTYPES
+ */
+Modal.propTypes = {
+  modal: PropTypes.bool.isRequired,
+  close: PropTypes.func.isRequired,
+  x: PropTypes.string,
+  icon: PropTypes.string,
+  hideIcon: PropTypes.bool,
+  title: PropTypes.string,
+  hideTitle: PropTypes.bool,
+  msgL1: PropTypes.string.isRequired,
+  msgL2: PropTypes.string,
+  hideMsgL2: PropTypes.bool,
+  btn1: PropTypes.string,
+  disableBtn1: PropTypes.bool,
+  hideBtn1: PropTypes.bool,
+  btn2: PropTypes.string,
+  redirect: PropTypes.func,
+  disableBtn2: PropTypes.bool,
+  hideBtn2: PropTypes.bool,
+  hideHeader: PropTypes.bool,
+  hideFooter: PropTypes.bool,
+  showSpinner: PropTypes.bool,
 }
 
 export default Modal

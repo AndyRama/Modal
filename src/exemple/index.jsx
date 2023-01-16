@@ -32,6 +32,11 @@ function Exemple() {
         msgL2="successfully installed" // replace with any string
         btn1="Back" // replace with any string
         btn2="Redirect" // replace with any string
+        // modalClass={modalClass}
+        // fadeDuration={fadeDuration}
+        // fadeDelay={fadeDelay}
+        // showSpinner={showSpinner}
+        // closeClass={closeClass}
         // redirect={goTo}              // !!! NEEDS APP ROUTING
 
         // DISABLE (optional)
