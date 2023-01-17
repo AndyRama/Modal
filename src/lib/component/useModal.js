@@ -10,11 +10,12 @@ function useModal() {
     setIsOpen(!isOpen)
   }
 
-  function escToClose() {
-    if (escToClose.key === 'Escape') {
+  const escToClose = (e) => {
+    if (e.keyCode === 27) {
       toggle()
     }
   }
+
   return {
     isOpen,
     toggle,

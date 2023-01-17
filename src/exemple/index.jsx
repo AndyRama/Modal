@@ -25,6 +25,12 @@ function Exemple() {
         modal={isOpen} // useModal hook
         close={toggle} // useModal hook
         x={close} // replace with the name of your import
+        // modalClass={modalClass}
+        // fadeDuration={fadeDuration}
+        // fadeDelay={fadeDelay}
+        // showSpinner={showSpinner}
+        // closeClass={closeClass}
+
         // ADDITIONAL (optional)
         icon={check} // replace with the name of your import
         title="Confirmation" // replace with any string
@@ -32,11 +38,7 @@ function Exemple() {
         msgL2="successfully installed" // replace with any string
         btn1="Back" // replace with any string
         btn2="Redirect" // replace with any string
-        // modalClass={modalClass}
-        // fadeDuration={fadeDuration}
-        // fadeDelay={fadeDelay}
-        // showSpinner={showSpinner}
-        // closeClass={closeClass}
+
         // redirect={goTo}              // !!! NEEDS APP ROUTING
 
         // DISABLE (optional)

@@ -145,7 +145,6 @@ Modal.propTypes = {
   hideBtn2: PropTypes.bool,
   hideHeader: PropTypes.bool,
   hideFooter: PropTypes.bool,
-  showSpinner: PropTypes.bool,
 }
 
 export default Modal
