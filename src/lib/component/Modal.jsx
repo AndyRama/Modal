@@ -1,5 +1,7 @@
 import { createPortal } from 'react-dom'
 import PropTypes from 'prop-types'
+import { useState } from 'react'
+import { useEffect } from 'react'
 
 function Modal({
   modal,
@@ -21,16 +23,34 @@ function Modal({
   redirect,
   disableBtn1 = '',
   disableBtn2 = '',
+  hideBtnClose,
+  showSpinner,
+  modalClass,
+  spinnerHtml,
 }) {
   if (disableBtn1) disableBtn1 = 'disabled'
   if (disableBtn2) disableBtn2 = 'disabled'
+  if (!modalClass) modalClass = ''
+
+  const [spinner, setSpinner] = useState(showSpinner)
+
+  useEffect(() => {
+    if (spinner) {
+      console.log('test')
+      setTimeout(() => {
+        setSpinner(false)
+        console.log('test2')
+      }, 2500)
+    }
+    //value of state is used here therefore must be passed as a dependency
+  }, [spinner])
 
   return createPortal(
     <>
-      {modal ? (
+      {modal && (!spinner || spinner === false) ? (
         <main
           autoFocus
-          className="modal"
+          className={`modal ${modalClass}`}
           role="main"
           // close modal when click outside of it
           onClick={() => {
@@ -47,13 +67,15 @@ function Modal({
             aria-labelledby="dialogTitle"
             aria-describedby="dialogDescription"
           >
-            <button
-              className="modal-container--close"
-              aria-label="Close"
-              onClick={close}
-            >
-              <img src={x} alt="close icon" />
-            </button>
+            {hideBtnClose ? null : (
+              <button
+                className="modal-container--close"
+                aria-label="Close"
+                onClick={close}
+              >
+                <img src={x} alt="close icon" />
+              </button>
+            )}
             {hideHeader ? null : (
               <>
                 <header className="modal-header">
@@ -117,7 +139,19 @@ function Modal({
             )}
           </section>
         </main>
-      ) : null}
+      ) : (
+        <div>
+          {spinner && modal && !spinnerHtml ? (
+            <div className="modal-spinner--time">
+              <div className="spinner-box">
+                <div className="loading-icon"></div>
+              </div>
+            </div>
+          ) : spinner && modal && spinnerHtml ? (
+            <div dangerouslySetInnerHTML={{ __html: spinnerHtml }}></div>
+          ) : null}
+        </div>
+      )}
     </>,
     document.body
   )
@@ -145,6 +179,8 @@ Modal.propTypes = {
   hideBtn2: PropTypes.bool,
   hideHeader: PropTypes.bool,
   hideFooter: PropTypes.bool,
+  hideBtnClose: PropTypes.bool,
+  modalClass: PropTypes.string,
 }
 
 export default Modal

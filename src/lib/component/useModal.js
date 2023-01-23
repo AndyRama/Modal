@@ -4,7 +4,6 @@ import { useState } from 'react'
 function useModal() {
   // Modal's state
   const [isOpen, setIsOpen] = useState(false)
-
   // Close modal when open
   function toggle() {
     setIsOpen(!isOpen)
