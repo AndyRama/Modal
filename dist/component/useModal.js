@@ -10,16 +10,15 @@ var _react = require("react");
 function useModal() {
   // Modal's state
   const [isOpen, setIsOpen] = (0, _react.useState)(false);
-
   // Close modal when open
   function toggle() {
     setIsOpen(!isOpen);
   }
-  function escToClose() {
-    if (escToClose.key === 'Escape') {
+  const escToClose = e => {
+    if (e.keyCode === 27) {
       toggle();
     }
-  }
+  };
   return {
     isOpen,
     toggle,

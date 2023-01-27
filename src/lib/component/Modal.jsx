@@ -27,19 +27,20 @@ function Modal({
   showSpinner,
   modalClass,
   spinnerHtml,
+  closeClass,
+  fadeDuration = 0,
 }) {
   if (disableBtn1) disableBtn1 = 'disabled'
   if (disableBtn2) disableBtn2 = 'disabled'
   if (!modalClass) modalClass = ''
+  if (!closeClass) closeClass = ''
 
   const [spinner, setSpinner] = useState(showSpinner)
 
   useEffect(() => {
     if (spinner) {
-      console.log('test')
       setTimeout(() => {
         setSpinner(false)
-        console.log('test2')
       }, 2500)
     }
     //value of state is used here therefore must be passed as a dependency
@@ -51,6 +52,7 @@ function Modal({
         <main
           autoFocus
           className={`modal ${modalClass}`}
+          style={{ animationDelay: `${fadeDuration}ms` }}
           role="main"
           // close modal when click outside of it
           onClick={() => {
@@ -69,7 +71,7 @@ function Modal({
           >
             {hideBtnClose ? null : (
               <button
-                className="modal-container--close"
+                className={`modal-container--close ${closeClass}`}
                 aria-label="Close"
                 onClick={close}
               >
@@ -156,6 +158,7 @@ function Modal({
     document.body
   )
 }
+
 /**
  * Modal PROPTYPES
  */
@@ -181,6 +184,10 @@ Modal.propTypes = {
   hideFooter: PropTypes.bool,
   hideBtnClose: PropTypes.bool,
   modalClass: PropTypes.string,
+  closeClass: PropTypes.string,
+  showSpinner: PropTypes.bool,
+  spinnerHtml: PropTypes.string,
+  fadeDuration: PropTypes.number,
 }
 
 export default Modal

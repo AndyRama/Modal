@@ -25,13 +25,15 @@ function Exemple() {
         modal={isOpen} // useModal hook
         close={toggle} // useModal hook
         x={close} // replace with the name of your import
+        escapeClose={true}
         // hideBtnClose={true} // decomment to hide btnClose
         // modalClass="custom-modal-class"
+        // closeClass="custom-close-class"
         showSpinner={true}
-        // spinnerHtml='<div className="test"></div>'
-        // fadeDuration={fadeDuration}
+        // spinnerHtml='<div className="Myclass"></div>'
+        // fadeDuration={10}
         // fadeDelay={fadeDelay}
-        escapeClose={true}
+
         // ADDITIONAL (optional)
         icon={check} // replace with the name of your import
         title="Confirmation" // replace with any string
@@ -44,15 +46,16 @@ function Exemple() {
         // DISABLE (optional)
         // disableBtn1={true}           // decomment to disable btn1
         // disableBtn2={true}           // comment to enable btn2
+
         // HIDE (optional)
         // hideBtnClose={true}          // decomment to hide btnClose
-        // hideIcon={true} // decomment to hide icon
+        // hideIcon={true}              // decomment to hide icon
         // hideTitle={true}             // decomment to hide title
         // hideMsgL2={true}             // decomment to hide msgL2
         // hideBtn1={true}              // decomment to hide btn1
         // hideBtn2={true}              // decomment to hide btn2
         // hideHeader={true}            // decomment to hide header
-        // hideFooter={true} // decomment to hide footer
+        // hideFooter={true}            // decomment to hide footer
       />
     </>
   )
