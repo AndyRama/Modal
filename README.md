@@ -8,7 +8,7 @@ A fully customizable Modal component for React apps
 
 ☑️ **useModal**
 
-    custom hook to mount / unmount Modal container
+    Custom hook to mount / unmount Modal container
 
 ☑️ **VARIOUS ITEMS**
 
@@ -66,6 +66,12 @@ A fully customizable Modal component for React apps
 | **redirect**    | Function | on click : redirect to chosen url  | optional     |
 | **hideHeader**  | Boolean  | mount item or null                 | optional     |
 | **hideFooter**  | Boolean  | mount item or null                 | optional     |
+| **modalClass**  | string   | add a custom class modal           | optional     |
+| **CloseClass**  | string   | add a custom class btn             | optional     |
+| **ShowSpinner** | Boolean  | mount item or null                 | optional     |
+| **SpinnerHtml** | string   | add a custom spinner html          | optional     |
+| **fadeDuration**| integer  | add fade duration for modal        | optional     |
+| **fadeDelai**   | integer  | add fade delai for modal           | optional     |
 
 ### Accessibility
 
@@ -96,7 +102,6 @@ A fully customizable Modal component for React apps
 
     🔘 Auto focus on modal when open
     🔘 Focus on each element by "Tab" (or "shift" + "Tab") key press
-    🔘 So that content can be read by screen readers
     🔘 Escape key press to close modal
 
 ### Use
@@ -158,13 +163,13 @@ export default function Exemple() {
         modal={isOpen} // useModal hook
         close={toggle} // useModal hook
         x={close} // replace with the name of your import
-        escapeClose={true}
+        escapeClose={true}// Escape to close
         // hideBtnClose={true} // decomment to hide btnClose
-        // modalClass="custom-modal-class"
-        // closeClass="custom-close-class"
-        // showSpinner={true}
-        // spinnerHtml='<div className="Myclass"></div>'
-        // fadeDuration={10}
+        // modalClass="custom-modal-class" // decomment to custom modal class
+        // closeClass="custom-close-class" // decomment to custom close class
+        // showSpinner={true} // decomment to show spinner
+        // spinnerHtml='<div className="Myclass"></div>'// decomment to custom spinner
+        // fadeDuration={10} // decomment to add fadeDuration
 
         // ADDITIONAL (optional)
         icon={check} // replace with the name of your import
