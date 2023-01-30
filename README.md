@@ -70,8 +70,8 @@ A fully customizable Modal component for React apps
 | **CloseClass**  | string   | add a custom class btn             | optional     |
 | **ShowSpinner** | Boolean  | mount item or null                 | optional     |
 | **SpinnerHtml** | string   | add a custom spinner html          | optional     |
-| **fadeDuration**| integer  | add fade duration for modal        | optional     |
-| **fadeDelai**   | integer  | add fade delai for modal           | optional     |
+| **fadeDuration**| integer  | add animation modal appear         | optional     |
+| **fadeDelai**   | integer  | add timeOut Modal appear           | optional     |
 
 ### Accessibility
 
@@ -169,7 +169,8 @@ export default function Exemple() {
         // closeClass="custom-close-class" // decomment to custom close class
         // showSpinner={true} // decomment to show spinner
         // spinnerHtml='<div className="Myclass"></div>'// decomment to custom spinner
-        // fadeDuration={10} // decomment to add fadeDuration
+        // fadeDelay={200}                              // decomment to add timeOut modal
+        // fadeDuration={10}                            // decomment to add animation appear
 
         // ADDITIONAL (optional)
         icon={check} // replace with the name of your import

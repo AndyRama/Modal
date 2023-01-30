@@ -29,9 +29,10 @@ function Exemple() {
         // hideBtnClose={true} // decomment to hide btnClose
         // modalClass="custom-modal-class" // decomment to custom modal class
         // closeClass="custom-close-class" // decomment to custom close class
-        showSpinner={true} // decomment to show spinner
+        // showSpinner={true} // decomment to show spinner
         // spinnerHtml='<div className="Myclass"></div>' // decomment to custom spinner
-        // fadeDuration={10} // decomment to add fadeDuration
+        // fadeDuration={10}                             // decomment to add animation appear
+        // fadeDelay={200}                               // decomment to add timeOut modal
 
         // ADDITIONAL (optional)
         icon={check} // replace with the name of your import
@@ -41,9 +42,6 @@ function Exemple() {
         btn1="Back" // replace with any string
         btn2="Redirect" // replace with any string
         // redirect={goTo}                               // !!! NEEDS APP ROUTING
-
-        // fadeDelay={200}                              // decomment to disable fadeDelay  (not work)
-        // fadeDuration={10} // decomment to disable fadeDuration (not work)
 
         // DISABLE (optional)
         // disableBtn1={true}                            // decomment to disable btn1
