@@ -37,6 +37,7 @@ function Modal(_ref) {
     spinnerHtml,
     closeClass,
     fadeDuration = 0
+    // fadeDelai,
   } = _ref;
   if (disableBtn1) disableBtn1 = 'disabled';
   if (disableBtn2) disableBtn2 = 'disabled';

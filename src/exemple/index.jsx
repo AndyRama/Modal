@@ -29,8 +29,8 @@ function Exemple() {
         // hideBtnClose={true} // decomment to hide btnClose
         // modalClass="custom-modal-class" // decomment to custom modal class
         // closeClass="custom-close-class" // decomment to custom close class
-        // showSpinner={true} // decomment to show spinner
-        spinnerHtml='<div className="Myclass"></div>' // decomment to custom spinner
+        showSpinner={true} // decomment to show spinner
+        // spinnerHtml='<div className="Myclass"></div>' // decomment to custom spinner
         // fadeDuration={10} // decomment to add fadeDuration
 
         // ADDITIONAL (optional)
@@ -41,6 +41,9 @@ function Exemple() {
         btn1="Back" // replace with any string
         btn2="Redirect" // replace with any string
         // redirect={goTo}                               // !!! NEEDS APP ROUTING
+
+        // fadeDelay={200}                              // decomment to disable fadeDelay  (not work)
+        // fadeDuration={10} // decomment to disable fadeDuration (not work)
 
         // DISABLE (optional)
         // disableBtn1={true}                            // decomment to disable btn1

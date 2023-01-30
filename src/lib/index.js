@@ -1,5 +1,5 @@
 // DOCUMENTATION
-import Feature from './documentation/andyrama-modal_FEATURES.png'
+// import Feature from './documentation/andyrama-modal_FEATURES.png'
 
 // ASSETS
 import close from './assets/close.png'
@@ -18,4 +18,4 @@ export { close }
 export { check }
 export { useModal }
 export { Modal }
-export { Feature }
+// export { Feature }

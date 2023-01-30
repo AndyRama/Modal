@@ -29,7 +29,7 @@ function Modal({
   spinnerHtml,
   closeClass,
   fadeDuration = 0,
-  // fadeDelai,
+  fadeDelay = 0,
 }) {
   if (disableBtn1) disableBtn1 = 'disabled'
   if (disableBtn2) disableBtn2 = 'disabled'
@@ -51,17 +51,16 @@ function Modal({
     <>
       {modal && (!spinner || spinner === false) ? (
         <main
-          autoFocus
-          className={`modal ${modalClass}`}
-          style={{ animationDelay: `${fadeDuration}ms` }}
           role="main"
+          autoFocus
+          className={`modal ${modalClass} `}
           // close modal when click outside of it
           onClick={() => {
             close()
           }}
         >
           <section
-            className="modal-container"
+            className={`modal-container ${fadeDuration}ms ${fadeDelay}ms`}
             role="dialog"
             aria-label="pop up message"
             id="modal-component"
@@ -189,6 +188,7 @@ Modal.propTypes = {
   showSpinner: PropTypes.bool,
   spinnerHtml: PropTypes.string,
   fadeDuration: PropTypes.number,
+  fadeDelay: PropTypes.number,
 }
 
 export default Modal
