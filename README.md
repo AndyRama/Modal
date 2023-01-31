@@ -45,33 +45,32 @@ A fully customizable Modal component for React apps
 
 ### Props
 
-| Name            | Type     | Description                        | Status       |
-| --------------- | -------- | ---------------------------------- | ------------ |
-| **modal**       | Boolean  | mount Modal or null                | **required** |
-| **close**       | Function | on click : close modal             | **required** |
-| **x**           | String   | close image source                 | **required** |
-| **icon**        | String   | modal container image source       | optional     |
-| **hideIcon**    | Boolean  | mount item or null                 | optional     |
-| **title**       | String   | any                                | optional     |
-| **hideTitle**   | Boolean  | mount item or null                 | optional     |
-| **msgL1**       | String   | any                                | **required** |
-| **msgL2**       | String   | any                                | optional     |
-| **hideMsgL2**   | Boolean  | mount item or null                 | optional     |
-| **btn1**        | String   | any                                | optional     |
-| **disableBtn1** | Boolean  | add or remove 'disabled' attribute | optional     |
-| **hideBtn1**    | Boolean  | mount item or null                 | optional     |
-| **btn2**        | String   | any                                | optional     |
-| **disableBtn2** | Boolean  | add or remove 'disabled' attribute | optional     |
-| **hideBtn2**    | Boolean  | mount item or null                 | optional     |
-| **redirect**    | Function | on click : redirect to chosen url  | optional     |
-| **hideHeader**  | Boolean  | mount item or null                 | optional     |
-| **hideFooter**  | Boolean  | mount item or null                 | optional     |
-| **modalClass**  | string   | add a custom class modal           | optional     |
-| **CloseClass**  | string   | add a custom class btn             | optional     |
-| **ShowSpinner** | Boolean  | mount item or null                 | optional     |
-| **SpinnerHtml** | string   | add a custom spinner html          | optional     |
-| **fadeDuration**| integer  | add animation modal appear         | optional     |
-| **fadeDelai**   | integer  | add timeOut Modal appear           | optional     |
+| Name              | Type     | Description                        | Status       |
+| ----------------- | -------- | ---------------------------------- | ------------ |
+| **modal**         | Boolean  | mount Modal or null                | **required** |
+| **close**         | Function | on click : close modal             | **required** |
+| **x**             | String   | close image source                 | **required** |
+| **icon**          | String   | modal container image source       | optional     |
+| **hideIcon**      | Boolean  | mount item or null                 | optional     |
+| **title**         | String   | any                                | optional     |
+| **hideTitle**     | Boolean  | mount item or null                 | optional     |
+| **msgL1**         | String   | any                                | **required** |
+| **msgL2**         | String   | any                                | optional     |
+| **hideMsgL2**     | Boolean  | mount item or null                 | optional     |
+| **btn1**          | String   | any                                | optional     |
+| **disableBtn1**   | Boolean  | add or remove 'disabled' attribute | optional     |
+| **hideBtn1**      | Boolean  | mount item or null                 | optional     |
+| **btn2**          | String   | any                                | optional     |
+| **disableBtn2**   | Boolean  | add or remove 'disabled' attribute | optional     |
+| **hideBtn2**      | Boolean  | mount item or null                 | optional     |
+| **redirect**      | Function | on click : redirect to chosen url  | optional     |
+| **hideHeader**    | Boolean  | mount item or null                 | optional     |
+| **hideFooter**    | Boolean  | mount item or null                 | optional     |
+| **modalClass**    | string   | add a custom class modal           | optional     |
+| **CloseClass**    | string   | add a custom class bt-close        | optional     |
+| **ShowSpinner**   | Boolean  | mount item or null                 | optional     |
+| **SpinnerHtml**   | string   | add a custom spinner html          | optional     |
+| **animationClass**| integer  | add animation modal appear         | optional     |
 
 ### Accessibility
 
@@ -164,13 +163,13 @@ export default function Exemple() {
         close={toggle} // useModal hook
         x={close} // replace with the name of your import
         escapeClose={true}// Escape to close
-        // hideBtnClose={true} // decomment to hide btnClose
-        // modalClass="custom-modal-class" // decomment to custom modal class
-        // closeClass="custom-close-class" // decomment to custom close class
-        // showSpinner={true} // decomment to show spinner
-        // spinnerHtml='<div className="Myclass"></div>'// decomment to custom spinner
-        // fadeDelay={200}                              // decomment to add timeOut modal
-        // fadeDuration={10}                            // decomment to add animation appear
+        // hideBtnClose={true}                            // decomment to hide btnClose
+        // modalClass="custom-modal-class"                // decomment to custom modal class
+        // closeClass="custom-close-class"                // decomment to custom close class
+        // showSpinner={true}                             // decomment to show spinner
+        // spinnerHtml='<div className="Myclass"></div>'  // decomment to custom spinner
+        // fadeDelay={200}                                // decomment to add timeOut modal
+        // fadeDuration={10}                              // decomment to add animation appear
 
         // ADDITIONAL (optional)
         icon={check} // replace with the name of your import
@@ -199,4 +198,3 @@ export default function Exemple() {
   );
 }
 ```
-![Select Modal items you need](./src/lib/documentation/andyrama-modal_FEATURES.png)
