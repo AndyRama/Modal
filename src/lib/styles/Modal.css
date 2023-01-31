@@ -1,3 +1,16 @@
+/* COLORS */
+/* replace '#------' by your color hex code */
+/* :root {
+  --primary: #------;
+  --secondary: #------;
+  --tertiary: #------;
+  --light: #------;
+  --disabled: #------;
+  --diabled-text: #------;
+  --close: #------;
+  --bg: rgba(-, -, -, -);
+} */
+
 /* MODAL CONTAINER */
 .modal {
   position: fixed;
