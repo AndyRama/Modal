@@ -26,14 +26,13 @@ function Exemple() {
         close={toggle} // useModal hook
         x={close} // replace with the name of your import
         escToClose={true} // Escape to close
-        // hideBtnClose={true}                            // decomment to hide btnClose
         // modalClass="custom-modal-class"                // decomment to custom modal class
         // closeClass="custom-close-class"                // decomment to custom close class
         // showSpinner={true}                             // decomment to show spinner
         // spinnerHtml='<div className="Myclass"></div>'  // decomment to custom spinner
 
         // ADDITIONAL (optional)
-        animationClass={'animationClass'} // comment to remove animation modal appears
+        // animationClass={'animationClass'} // comment to remove animation modal appears
         icon={check} // replace with the name of your import
         title="Confirmation" // replace with any string
         msgL1="Modal plugin" // replace with any string

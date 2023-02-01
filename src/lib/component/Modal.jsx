@@ -12,8 +12,16 @@ import { useState, useEffect } from 'react'
  * @param   {boolean}    props.escToClose       [escape modal with echap]
  
  * @param   {boolean}    props.modal            [display Modal || null]
- * @param   {function}   props.close            [handling Modal close when click]
+ * @param   {string}     props.modalClass       [custom modal class "custom-modal-class" ]
+ * @param   {string}     props.close            [handling Modal close when click]
+ * @param   {string}     props.closeClass       [custom close class "custom-close-class"]
+ * @param   {boolean}    props.hideBtnClose     [display item|| null] 
  * @param   {string}     props.x                [image source]
+ 
+ * @param   {boolean}    props.showSpinner      [display item || null]
+ * @param   {string}     props.spinnerHtml      [custom spinner '<div className="Myclass"></div>']
+ * @param   {string}     props.animationClass   [display item || null]
+ * 
  * @param   {string}     props.icon             [image source]
  * @param   {boolean}    props.hideIcon         [display item || null]
  * @param   {string}     props.title            [title of message]
