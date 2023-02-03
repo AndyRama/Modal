@@ -3,6 +3,12 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+Object.defineProperty(exports, "FEATURES", {
+  enumerable: true,
+  get: function get() {
+    return _andyramaModal_FEATURES.default;
+  }
+});
 Object.defineProperty(exports, "Modal", {
   enumerable: true,
   get: function get() {
@@ -27,6 +33,7 @@ Object.defineProperty(exports, "useModal", {
     return _useModal.default;
   }
 });
+var _andyramaModal_FEATURES = _interopRequireDefault(require("./documentation/andyrama-modal_FEATURES.png"));
 var _close = _interopRequireDefault(require("./assets/close.png"));
 var _check = _interopRequireDefault(require("./assets/check.png"));
 require("./styles/Modal.css");
