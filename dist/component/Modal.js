@@ -10,8 +10,51 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 var _react = require("react");
 var _jsxRuntime = require("react/jsx-runtime");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+/**
+ * Modal
+ *
+ * @param   {object}     props
+ * 
+ * @param   {boolean}    props.isOpen           [btn-modal trigger || null]
+ * @param   {boolean}    props.toggle           [display open || close modal]
+ * @param   {boolean}    props.escToClose       [escape modal with echap]
+ 
+ * @param   {boolean}    props.modal            [display Modal || null]
+ * @param   {string}     props.modalClass       [custom modal class "custom-modal-class" ]
+ * @param   {string}     props.close            [handling Modal close when click]
+ * @param   {string}     props.closeClass       [custom close class "custom-close-class"]
+ * @param   {boolean}    props.hideBtnClose     [display item|| null] 
+ * @param   {string}     props.x                [image source]
+ 
+ * @param   {boolean}    props.showSpinner      [display item || null]
+ * @param   {string}     props.spinnerHtml      [custom spinner '<div className="Myclass"></div>']
+ * @param   {string}     props.animationClass   [display item || null]
+ * 
+ * @param   {string}     props.icon             [image source]
+ * @param   {boolean}    props.hideIcon         [display item || null]
+ * @param   {string}     props.title            [title of message]
+ * @param   {boolean}    props.hideTitle        [display item || null]
+ * @param   {string}     props.msgL1            [body of message, Line 1]
+ * @param   {string}     props.msgL2            [body of message, Line 2]
+ * @param   {boolean}    props.hideMsgL2        [display item || null]
+ * @param   {string}     props.btn1             [label for btn1]
+ * @param   {boolean}    props.disableBtn1      [add || remove 'disabled' attribute on its className]
+ * @param   {boolean}    props.hideBtn1         [display item || null]
+ * @param   {string}     props.btn2             [label for btn2]
+ * @param   {boolean}    props.disableBtn2      [add || remove 'disabled' attribute on its className]
+ * @param   {boolean}    props.hideBtn2         [display item || null]
+ * @param   {function}   props.redirect         [handling redirect to another page when click]
+ * @param   {boolean}    props.hideHeader       [display item || null]
+ * @param   {boolean}    props.hideFooter       [display item || null]
+ *
+ * @returns {Reactnode}  jsx injected in DOM
+ */
+
 function Modal(_ref) {
   let {
+    isOpen,
+    toggle,
+    escToClose,
     modal,
     close,
     x,
@@ -36,13 +79,13 @@ function Modal(_ref) {
     modalClass,
     spinnerHtml,
     closeClass,
-    fadeDuration = 0
-    // fadeDelai,
+    animationClass
   } = _ref;
   if (disableBtn1) disableBtn1 = 'disabled';
   if (disableBtn2) disableBtn2 = 'disabled';
   if (!modalClass) modalClass = '';
   if (!closeClass) closeClass = '';
+  if (!animationClass) animationClass = '';
   const [spinner, setSpinner] = (0, _react.useState)(showSpinner);
   (0, _react.useEffect)(() => {
     if (spinner) {
@@ -54,19 +97,16 @@ function Modal(_ref) {
   }, [spinner]);
   return /*#__PURE__*/(0, _reactDom.createPortal)( /*#__PURE__*/(0, _jsxRuntime.jsx)(_jsxRuntime.Fragment, {
     children: modal && (!spinner || spinner === false) ? /*#__PURE__*/(0, _jsxRuntime.jsx)("main", {
+      role: "main",
       autoFocus: true,
-      className: "modal ".concat(modalClass),
-      style: {
-        animationDelay: "".concat(fadeDuration, "ms")
-      },
-      role: "main"
+      className: "modal ".concat(modalClass)
       // close modal when click outside of it
       ,
       onClick: () => {
         close();
       },
       children: /*#__PURE__*/(0, _jsxRuntime.jsxs)("section", {
-        className: "modal-container",
+        className: "modal-container ".concat(animationClass),
         role: "dialog",
         "aria-label": "pop up message",
         id: "modal-component",
@@ -174,7 +214,10 @@ Modal.propTypes = {
   closeClass: _propTypes.default.string,
   showSpinner: _propTypes.default.bool,
   spinnerHtml: _propTypes.default.string,
-  fadeDuration: _propTypes.default.number
+  animationClass: _propTypes.default.string,
+  isOpen: _propTypes.default.bool,
+  toggle: _propTypes.default.bool,
+  escToClose: _propTypes.default.bool
 };
 var _default = Modal;
 exports.default = _default;
